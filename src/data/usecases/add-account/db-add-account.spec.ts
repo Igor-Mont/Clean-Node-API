@@ -73,7 +73,7 @@ describe('DbAddAccount Usecase', () => {
     jest.spyOn(encrypterStub, 'encrypt').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
 
     const promise = sut.add(accountData)
-    expect(promise).rejects.toThrow()
+    await expect(promise).rejects.toThrow()
   });
 
   test('Should call AddAccountRepository with correct values', async () => {
