@@ -1,4 +1,5 @@
-import express from "express";
+import express from "express"
+import 'dotenv/config'
 import setupMiddlewares from './middlewares'
 import setupRoutes from './routes'
 
